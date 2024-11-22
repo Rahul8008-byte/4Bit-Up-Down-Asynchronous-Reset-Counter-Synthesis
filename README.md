@@ -10,35 +10,42 @@ Functional Simulation: Incisive Simulator (ncvlog, ncelab, ncsim)
 
 Synthesis: Genus
 
-## counter
+### Step 1: Getting Started
 
-`timescale 1ns / 1 ns
+Synthesis requires three files as follows,
 
-module counter(clk,m,rst,count);
+◦ Liberty Files (.lib)
 
-input clk,m,rst;
+◦ Verilog/VHDL Files (.v or .vhdl or .vhd)
 
-output reg [3:0] count;
+◦ SDC (Synopsis Design Constraint) File (.sdc)
 
-always@(posedge clk or negedge rst)
+ ### Step 2 : Creating an SDC File
 
-begin
+•	In your terminal type “gedit input_constraints.sdc” to create an SDC File if you do not have one.
 
-if (!rst)
+•	The SDC File must contain the following commands;
 
-count=0;
+create_clock -name clk -period 2 -waveform {0 1} [get_ports "clk"]
 
-else if(m)
+set_clock_transition -rise 0.1 [get_clocks "clk"]
 
-count=count+1;
+set_clock_transition -fall 0.1 [get_clocks "clk"]
 
-else
+set_clock_uncertainty 0.01 [get_ports "clk"]
 
-count=count-1;
+set_input_delay -max 0.8 [get_ports "rst"] -clock [get_clocks "clk"]
 
-end
+set_output_delay -max 0.8 [get_ports "count"] -clock [get_clocks "clk"]
 
-endmodule
+i→ Creates a Clock named “clk” with Time Period 2ns and On Time from t=0 to t=1.
+
+ii, iii → Sets Clock Rise and Fall time to 100ps.
+
+iv → Sets Clock Uncertainty to 10ps.
+
+v, vi → Sets the maximum limit for I/O port delay to 1ps.
+
 
 ## counter_test
 
@@ -84,41 +91,6 @@ initial
 
 endmodule
 
-### Step 1: Getting Started
-
-Synthesis requires three files as follows,
-
-◦ Liberty Files (.lib)
-
-◦ Verilog/VHDL Files (.v or .vhdl or .vhd)
-
-◦ SDC (Synopsis Design Constraint) File (.sdc)
-
- ### Step 2 : Creating an SDC File
-
-•	In your terminal type “gedit input_constraints.sdc” to create an SDC File if you do not have one.
-
-•	The SDC File must contain the following commands;
-
-create_clock -name clk -period 2 -waveform {0 1} [get_ports "clk"]
-
-set_clock_transition -rise 0.1 [get_clocks "clk"]
-
-set_clock_transition -fall 0.1 [get_clocks "clk"]
-
-set_clock_uncertainty 0.01 [get_ports "clk"]
-
-set_input_delay -max 0.8 [get_ports "rst"] -clock [get_clocks "clk"]
-
-set_output_delay -max 0.8 [get_ports "count"] -clock [get_clocks "clk"]
-
-i→ Creates a Clock named “clk” with Time Period 2ns and On Time from t=0 to t=1.
-
-ii, iii → Sets Clock Rise and Fall time to 100ps.
-
-iv → Sets Clock Uncertainty to 10ps.
-
-v, vi → Sets the maximum limit for I/O port delay to 1ps.
 
 ### Step 3 : Performing Synthesis
 
@@ -136,6 +108,38 @@ used.
 • The tool used for Synthesis is “Genus”. Hence, type “genus -gui” to open the tool.
 
 • Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
+
+
+## counter
+
+`timescale 1ns / 1 ns
+
+module counter(clk,m,rst,count);
+
+input clk,m,rst;
+
+output reg [3:0] count;
+
+always@(posedge clk or negedge rst)
+
+begin
+
+if (!rst)
+
+count=0;
+
+else if(m)
+
+count=count+1;
+
+else
+
+count=count-1;
+
+end
+
+endmodule
+
 
 #### Synthesis RTL Schematic :
 ![Screenshot (60)](https://github.com/user-attachments/assets/735195f8-1c1f-4911-90c3-2c429b36083d)
