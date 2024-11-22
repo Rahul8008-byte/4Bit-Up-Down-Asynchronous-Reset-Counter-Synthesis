@@ -142,20 +142,24 @@ endmodule
 
 
 #### Synthesis RTL Schematic :
-![Screenshot (60)](https://github.com/user-attachments/assets/735195f8-1c1f-4911-90c3-2c429b36083d)
+![WhatsApp Image 2024-11-22 at 21 10 31_1ebb40cd](https://github.com/user-attachments/assets/7fa75ba3-042f-4f2a-923f-f0908d28f4eb)
+
 
 
 #### Area report:
-![WhatsApp Image 2024-11-22 at 21 11 00_a7f7fff9](https://github.com/user-attachments/assets/2911d83c-8e41-4687-b6db-c13970623ed7)
+![WhatsApp Image 2024-11-22 at 21 03 05_99d6fcbe](https://github.com/user-attachments/assets/63563b00-473e-4438-978b-22720bc871ff)
 
 
 
 #### Power Report:
-![WhatsApp Image 2024-11-22 at 21 11 53_042a32d9](https://github.com/user-attachments/assets/22806e1a-3365-40ec-b080-b2a3a0869cf5)
+![WhatsApp Image 2024-11-22 at 21 04 35_41b8befa](https://github.com/user-attachments/assets/aefcbe72-7baf-4043-9496-46c666644076)
+
+
 
 
 #### Timing Report: 
-![Screenshot (62)](https://github.com/user-attachments/assets/e01a652d-85f3-4811-931f-113b0a5e754f)
+![WhatsApp Image 2024-11-22 at 21 05 18_0cdc1201](https://github.com/user-attachments/assets/30540fc5-544c-43e9-9b9f-8ce66a11454c)
+
 
 
 #### Result: 
