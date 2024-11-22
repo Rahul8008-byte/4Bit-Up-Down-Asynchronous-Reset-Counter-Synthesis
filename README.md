@@ -142,12 +142,13 @@ endmodule
 
 
 #### Synthesis RTL Schematic :
-![WhatsApp Image 2024-11-22 at 21 10 31_1ebb40cd](https://github.com/user-attachments/assets/7fa75ba3-042f-4f2a-923f-f0908d28f4eb)
+![WhatsApp Image 2024-11-22 at 21 03 05_99d6fcbe](https://github.com/user-attachments/assets/63563b00-473e-4438-978b-22720bc871ff)
 
 
 
 #### Area report:
-![WhatsApp Image 2024-11-22 at 21 03 05_99d6fcbe](https://github.com/user-attachments/assets/63563b00-473e-4438-978b-22720bc871ff)
+![WhatsApp Image 2024-11-22 at 21 04 06_a9eced04](https://github.com/user-attachments/assets/c61068a9-2ef8-4b1e-9853-61d9dde01415)
+
 
 
 
