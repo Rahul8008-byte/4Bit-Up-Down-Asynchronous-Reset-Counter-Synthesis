@@ -146,7 +146,7 @@ endmodule
 
 
 #### Area report:
-![Screenshot (63)](https://github.com/user-attachments/assets/8d22263e-139f-426d-ace8-0910f11cbcf4)
+(https://github.com/user-attachments/assets/bd00deec-e3ab-4489-8eea-9e5c3a65546e)
 
 
 #### Power Report:
