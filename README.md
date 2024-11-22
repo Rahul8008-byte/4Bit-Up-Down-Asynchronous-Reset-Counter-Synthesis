@@ -146,11 +146,12 @@ endmodule
 
 
 #### Area report:
-(https://github.com/user-attachments/assets/bd00deec-e3ab-4489-8eea-9e5c3a65546e)
+![WhatsApp Image 2024-11-22 at 21 11 00_a7f7fff9](https://github.com/user-attachments/assets/2911d83c-8e41-4687-b6db-c13970623ed7)
+
 
 
 #### Power Report:
-![Screenshot (61)](https://github.com/user-attachments/assets/6efbe9c2-f3bd-4ccb-9a98-100a6309c20e)
+![WhatsApp Image 2024-11-22 at 21 11 53_042a32d9](https://github.com/user-attachments/assets/22806e1a-3365-40ec-b080-b2a3a0869cf5)
 
 
 #### Timing Report: 
